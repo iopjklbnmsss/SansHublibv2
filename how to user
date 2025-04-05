@@ -1,0 +1,34 @@
+
+local Window = SansHubLib:CreateWindow("SansHub", "1.0")
+
+local MainTab = Window:AddTab("主界面")
+
+MainTab:AddToggle("开关", "开关测试", function(state)
+    print("开关:", state)
+end)
+
+MainTab:AddToggle("开关", "开关测试", function(state)
+    print("开关:", state)
+end)
+
+MainTab:AddSlider("拖拽条", "测试拖拽条", 16, 100, 16, function(value)
+    print("值:", value)
+end)
+
+MainTab:AddInput("输入框", "输入框测试", "自定义文本", function(text)
+       print("输入内容:", text)
+end)
+MainTab:AddLabel("标签测试可自定义颜色", Color3.fromRGB(0, 255, 0))  
+
+local Section = MainTab:AddSection("分组")
+
+local ExpandList = Section:AddExpandList("展开列表", "展开列表测试", {
+    { Type = "Checkbox", Text = "选项1", Callback = function(Value) print(Value) end },
+    { Type = "Radio", Text = "单选1", Callback = function() print("选中") end }
+})
+
+
+
+MainTab:AddDropdown("下拉菜单", "下来菜单测试", {"a", "b", "c"}, "a", function(selected)
+    print("选择了:", selected)
+end)
