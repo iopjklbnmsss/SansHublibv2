@@ -1,3 +1,4 @@
+local SansHubLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/iopjklbnmsss/SansHublibv2/refs/heads/main/sanshub"))()
 
 local Window = SansHubLib:CreateWindow("SansHub", "1.0")
 
